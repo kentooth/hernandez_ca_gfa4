@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+</head>
+<body>
+    <script>
+        function determineTriangle (a,b,c){
+            if (isNaN(a) || isNaN(b) || isNaN(c)){
+                return "kindly enter a valid number. "
+            }
+            if (a<=0 || b<=0 || c<=0){
+            return "kindly enter a valid number. "
+            }
+            if (a==b && b==c){
+                return "You triangle is EQUILATERAL.";
+            }
+            else if (a==b && a==c && b==c){
+                return "You rtriangle is ISCOCELES.";
+            
+            }
+            else {
+                return "You triangle is SCALENE.";
+            }
+        }
+
+        function input (){
+            var a= prompt ("Please kindly enter the lenght of side A: ");
+            var b= prompt ("Please kindly enter the lenght of side B: ");
+            var c= prompt ("Please kindly enter the lenght of side C: ");
+
+            var result = determineTriangle(parseInt(a), parseInt(b),parseInt(c));
+            window.alert(result);
+
+        }
+        input();
+    </script>
+</body>
+</html>
